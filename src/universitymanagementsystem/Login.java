@@ -296,7 +296,7 @@ public class Login extends javax.swing.JFrame {
         try{
             ResultSet rs = db.getResult(query);
             if(rs.next()){
-                Enrol obEnrol = new Enrol();
+                Enrol obEnrol = new Enrol(role, name);
                 obEnrol.setVisible(true);
             }else{
                 JOptionPane.showMessageDialog(f,"Error\n");
